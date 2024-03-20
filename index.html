@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة الفواتير</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1> [{(عبــدالله علــي )}]   </h1>
+        <div id="add-invoice-form">
+            <h2>إضافة فاتورة جديدة</h2>
+            <label for="sequence">التسلسل:</label>
+            <input type="number" id="sequence">
+            <label for="name">الاسم:</label>
+            <input type="text" id="name">
+            <label for="amount">المبلغ:</label>
+            <input type="number" id="amount">
+            <label for="date">التاريخ:</label>
+            <input type="date" id="date">
+            <label for="remaining">عدد المبلغ الباقي:</label>
+            <input type="number" id="remaining">
+            <button id="add-invoice-btn">إضافة الفاتورة</button>
+        </div>
+        <table id="invoices-table">
+            <thead>
+                <tr>
+                    <th>التسلسل</th>
+                    <th>الاسم</th>
+                    <th>المبلغ</th>
+                    <th>التاريخ</th>
+                    <th>عدد المبلغ الباقي</th>
+                </tr>
+            </thead>
+            <tbody id="invoices-body">
+                <!-- ستظهر البيانات هنا -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
