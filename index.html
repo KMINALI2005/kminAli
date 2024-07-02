@@ -1,44 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قائمة الفواتير</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>فريق أحباب علي كاظم</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/api/placeholder/1200/800'); /* This would be replaced with the actual image URL */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #ff6600;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .player-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .player {
+            background-color: #ff6600;
+            color: white;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-align: center;
+            width: 120px;
+        }
+        .player:hover {
+            background-color: #e55b00;
+        }
+        #playerInfo {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: rgba(249, 249, 249, 0.9);
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1> [{(عبــدالله علــي )}]   </h1>
-        <div id="add-invoice-form">
-            <h2>إضافة فاتورة جديدة</h2>
-            <label for="sequence">التسلسل:</label>
-            <input type="number" id="sequence">
-            <label for="name">الاسم:</label>
-            <input type="text" id="name">
-            <label for="amount">المبلغ:</label>
-            <input type="number" id="amount">
-            <label for="date">التاريخ:</label>
-            <input type="date" id="date">
-            <label for="remaining">عدد المبلغ الباقي:</label>
-            <input type="number" id="remaining">
-            <button id="add-invoice-btn">إضافة الفاتورة</button>
-        </div>
-        <table id="invoices-table">
-            <thead>
-                <tr>
-                    <th>التسلسل</th>
-                    <th>الاسم</th>
-                    <th>المبلغ</th>
-                    <th>التاريخ</th>
-                    <th>عدد المبلغ الباقي</th>
-                </tr>
-            </thead>
-            <tbody id="invoices-body">
-                <!-- ستظهر البيانات هنا -->
-            </tbody>
-        </table>
+        <h1>فريق أحباب علي كاظم</h1>
+        <div class="player-list" id="playerList"></div>
+        <div id="playerInfo"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        const players = [
+            { name: "علي صلاح", age: 25, position: "مهاجم", skills: "سريع وماهر في التسديد" },
+            { name: "ايسر بهاء", age: 23, position: "جناح", skills: "مراوغ ممتاز" },
+            { name: "عبداللطيف", age: 27, position: "وسط", skills: "رؤية جيدة للملعب" },
+            { name: "احمد", age: 22, position: "مدافع", skills: "قوي في الالتحامات" },
+            { name: "ابو الحسن", age: 29, position: "ظهير", skills: "سرعة وقدرة على الصعود" },
+            { name: "كابتن حاتم", age: 31, position: "قائد الفريق", skills: "خبرة وقيادة" },
+            { name: "ابو ذنون", age: 26, position: "وسط دفاعي", skills: "قطع الكرات" },
+            { name: "صباح", age: 24, position: "جناح", skills: "سرعة وتمريرات دقيقة" },
+            { name: "علي وليد", age: 20, position: "مهاجم", skills: "تسديد قوي" },
+            { name: "علاوي", age: 28, position: "حارس مرمى", skills: "ردود فعل سريعة" },
+            { name: "حمودي علوان", age: 21, position: "وسط مهاجم", skills: "إبداع في صناعة اللعب" },
+            { name: "محسن الجمبة", age: 30, position: "مدافع", skills: "قوة بدنية وحسم في التدخلات" },
+            { name: "كابتن عبدالله علي", age: 29, position: "وسط ميدان", skills: "قيادة وتوزيع اللعب" },
+            { name: "طه رحيم", age: 22, position: "مهاجم", skills: "سرعة وتسديد دقيق" },
+            { name: "فوزي", age: 25, position: "ظهير أيمن", skills: "دفاع قوي وصعود سريع" },
+            { name: "وسام هاشم الصخرة", age: 28, position: "مدافع", skills: "قوة بدنية وثبات" },
+            { name: "محمد خضير", age: 23, position: "وسط ميدان", skills: "مهارات فنية عالية" },
+            { name: "احمد ياسين", age: 26, position: "جناح", skills: "سرعة ومراوغة" },
+            { name: "سالم", age: 24, position: "حارس مرمى", skills: "مرونة وقفزات قوية" },
+            { name: "احمد رسام", age: 27, position: "وسط هجومي", skills: "رؤية ممتازة وتمريرات دقيقة" }
+        ];
+
+        const playerList = document.getElementById('playerList');
+        const playerInfo = document.getElementById('playerInfo');
+
+        players.forEach(player => {
+            const playerElement = document.createElement('div');
+            playerElement.className = 'player';
+            playerElement.textContent = player.name;
+            playerElement.onclick = () => showPlayerInfo(player);
+            playerList.appendChild(playerElement);
+        });
+
+        function showPlayerInfo(player) {
+            playerInfo.innerHTML = `
+                <h2>${player.name}</h2>
+                <p>العمر: ${player.age}</p>
+                <p>المركز: ${player.position}</p>
+                <p>المميزات: ${player.skills}</p>
+            `;
+        }
+    </script>
 </body>
 </html>
