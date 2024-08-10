@@ -3,110 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فريق أحباب علي كاظم</title>
+    <title>kmeeun Iraqi - اللهم احفظ العراق وشعبه  </title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('images/ahba.jpg'); /* تعديل المسار إلى الصورة المحلية */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
+        @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@400;700&display=swap');
+        
+        body, html {
             margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            background: linear-gradient(45deg, #2c3e50, #34495e);
+            color: #ecf0f1;
+            text-align: center;
+            padding: 60px 0;
+            border-bottom: 5px solid #e74c3c;
         }
         h1 {
-            color: #ff6600;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-family: 'Aref Ruqaa', serif;
+            font-size: 3.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        .player-list {
+        .subtitle {
+            font-size: 1.2em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        .content {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: space-between;
+            margin-top: 40px;
         }
-        .player {
-            background-color: #ff6600;
-            color: white;
-            margin: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+        .main-content {
+            width: 65%;
+        }
+        .sidebar {
+            width: 30%;
+        }
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .card h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+            font-family: 'Aref Ruqaa', serif;
+        }
+        .card p {
+            line-height: 1.6;
+        }
+        .tweet {
+            background: #ecf0f1;
+            border-right: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .poem {
+            font-family: 'Aref Ruqaa', serif;
             text-align: center;
-            width: 120px;
+            font-size: 1.2em;
+            line-height: 2;
+            color: #34495e;
         }
-        .player:hover {
-            background-color: #e55b00;
-        }
-        #playerInfo {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: rgba(249, 249, 249, 0.9);
-            border-radius: 5px;
+        @media (max-width: 768px) {
+            .main-content, .sidebar {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>kmeeun Iraqi</h1>
+        <p class="subtitle">| مجرد كلمات ومواساة لنفسي | صوت للتغيير</p>
+    </header>
+    
     <div class="container">
-        <h1>فريق أحباب علي كاظم</h1>
-        <div class="player-list" id="playerList"></div>
-        <div id="playerInfo"></div>
+        <div class="content">
+            <div class="main-content">
+                <div class="card">
+                    <h2>أفكاري وتأملاتي</h2>
+                    <div class="tweet">
+                        منذ زمن وأنا أتعامل مع ناس غرباء على تويتر وما أعرفهم في الواقع وهاي الشغلة تخليني مرتاح لأن ماكو التزام شخصي لكن الجانب السلبي هو إنه إذا اختلف وياك أحد يبدأ الهجوم عليك بدون رحمة وهاي الشغلة بصراحة تخوفني يعني بسهولة ممكن تتعرض للسب والطعن رغم إني حذر كلش لكن مرات أمر بهيچ مواقف.
+                    </div>
+                    <div class="tweet">
+                        أكثر شي يقهر بالنفاق بمجتمعنا العراقي هو الناس اللي تتفاخر بالقيم والمبادئ وورا الكواليس تتناقض مع كل شي تحجي بيه يحاسبون غيرهم على أصغر زلة وهما نفسهم يغرقون بالعيوب منو اللي ضيعنه غير هالنفاق
+                    </div>
+                    <div class="tweet">
+                        ما نقبل بأي قانون ينتقص من حقوق نساءنا ويظلمهن النساء العراقيات هن أساس المجتمع وكرامتهن خط أحمر، لازم يكون قانون الأحوال الشخصية منصف وعادل يحمي حقوقهن ويراعي واقعهن اليوم …
+                        ‏⁧‫#حقوق_المرأة‬⁩
+                        ‏⁧‫#لا_تعديل_قانون_الأحوال_الشخصية‬⁩
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>قصيدة اليوم</h2>
+                    <div class="poem">
+                        في قلب بغداد تنبض الحياة<br>
+                        بين أزقتها تروى الحكايات<br>
+                        صوت الناي يعانق صخب الشوارع<br>
+                        ونحن نحلم بغدٍ أجمل آتِ
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar">
+                <div class="card">
+                    <h2>عن kmeeun Iraqi</h2>
+                    <p> أسعى من خلال كلماتي لتسليط الضوء على قضايا مجتمعنا والدعوة للتغيير الإيجابي. أؤمن بقوة الكلمة في صنع الفرق وبناء جسور التواصل بين الناس.</p>
+                </div>
+                
+                <div class="card">
+                    <h2>اهتماماتي</h2>
+                    <ul>
+                        <li>الشعر والأدب العربي</li>
+                        <li>حقوق الإنسان والمرأة</li>
+                        <li>التغيير الاجتماعي الإيجابي</li>
+                        <li>الكتابة الإبداعية</li>
+                        <li>الثقافة العراقية المعاصرة</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
-        const players = [
-            { name: " ابوذنون", age: 25, position: "مهاجم", skills: "سريع وماهر في التسديد" },
-            { name: "ايسر بهاء", age: 23, position: "جناح", skills: "مراوغ ممتاز" },
-            { name: "عبداللطيف", age: 27, position: "وسط", skills: "رؤية جيدة للملعب" },
-            { name: "احمد", age: 22, position: "مدافع", skills: "قوي في الالتحامات" },
-            { name: "ابو الحس", age: 29, position: "ظهير", skills: "سرعة وقدرة على الصعود" },
-            { name: "كابتن حاتم", age: 31, position: "قائد الفريق", skills: "خبرة وقيادة" },
-            { name:  "علي صلاح", age: 26, position: "وسط دفاعي", skills: "قطع الكرات" },
-            { name: "صباح", age: 24, position: "جناح", skills: "سرعة وتمريرات دقيقة" },
-            { name: "علي وليد", age: 20, position: "مهاجم", skills: "تسديد قوي" },
-            { name: "علاوي الحارس", age: 28, position: "حارس مرمى", skills: "ردود فعل سريعة" },
-            { name: "حمودي علوان", age: 21, position: "وسط مهاجم", skills: "إبداع في صناعة اللعب" },
-            { name: " كابتن محسن ", age: 30, position: "مدافع", skills: "قوة بدنية وحسم في التدخلات" },
-            { name: "كابتن عبدالله علي", age: 29, position: "وسط ميدان", skills: "قيادة وتوزيع اللعب" },
-            { name: "طه رحيم", age: 22, position: "مهاجم", skills: "سرعة وتسديد دقيق" },
-            { name: "فوزي", age: 25, position: "ظهير أيمن", skills: "دفاع قوي وصعود سريع" },
-            { name: "وسام هاشم الصخرة", age: 28, position: "مدافع", skills: "قوة بدنية وثبات" },
-            { name: "محمد خضير", age: 23, position: "وسط ميدان", skills: "مهارات فنية عالية" },
-            { name: "احمد ياسين", age: 26, position: "جناح", skills: "سرعة ومراوغة" },
-            { name: "سالم", age: 24, position: "حارس مرمى", skills: "مرونة وقفزات قوية" },
-            { name: "احمد رسام", age: 27, position: "وسط هجومي", skills: "رؤية ممتازة وتمريرات دقيقة" },
-            { name: "رعد بهاء", age: 24, position: "مهاجم جناح ", skills: "مهارة وسرعة وابداع" },
-        ];
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+            });
 
-        const playerList = document.getElementById('playerList');
-        const playerInfo = document.getElementById('playerInfo');
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
 
-        players.forEach(player => {
-            const playerElement = document.createElement('div');
-            playerElement.className = 'player';
-            playerElement.textContent = player.name;
-            playerElement.onclick = () => showPlayerInfo(player);
-            playerList.appendChild(playerElement);
+            function scanDocument() {
+                cards.forEach(card => {
+                    if (isInViewport(card)) {
+                        card.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', scanDocument);
+            scanDocument(); // Initial check
         });
-
-        function showPlayerInfo(player) {
-            playerInfo.innerHTML = `
-                <h2>${player.name}</h2>
-                <p>العمر: ${player.age}</p>
-                <p>المركز: ${player.position}</p>
-                <p>المميزات: ${player.skills}</p>
-            `;
-        }
     </script>
 </body>
 </html>
