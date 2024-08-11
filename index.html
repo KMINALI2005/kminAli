@@ -1,182 +1,171 @@
-‎<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kmeeun Iraqi - كاتب  </title>
+    <title>kmeein Iraqi - صفحتي المزهرة</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@400;700&display=swap');
-        
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Cairo', sans-serif;
-            background-color: #f5f5f5;
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
             color: #333;
-        }
-        .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            background-color: #fff5f5;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffcccb' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
         header {
-            background: linear-gradient(45deg, #2c3e50, #34495e);
-            color: #ecf0f1;
+            background-color: #ff6b6b;
+            color: #fff;
             text-align: center;
-            padding: 60px 0;
-            border-bottom: 5px solid #e74c3c;
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        h1 {
-            font-family: 'Aref Ruqaa', serif;
-            font-size: 3.5em;
-            margin: 0;
+        h1, h2 {
+            margin-bottom: 0.5rem;
+            font-size: 2.5em;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        .subtitle {
-            font-size: 1.2em;
-            margin-top: 10px;
-            font-style: italic;
-        }
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 40px;
-        }
-        .main-content {
-            width: 65%;
-        }
-        .sidebar {
-            width: 30%;
-        }
-        .card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-            padding: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        }
-        .card h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #e74c3c;
-            padding-bottom: 10px;
-            font-family: 'Aref Ruqaa', serif;
-        }
-        .card p {
-            line-height: 1.6;
-        }
-        .tweet {
-            background: #ecf0f1;
-            border-right: 4px solid #3498db;
-            padding: 15px;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-        .poem {
-            font-family: 'Aref Ruqaa', serif;
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+            background-color: #ffdab9;
+            line-height: 200px;
             text-align: center;
-            font-size: 1.2em;
-            line-height: 2;
-            color: #34495e;
+            font-size: 14px;
+            border: 5px solid #ff9999;
+            box-shadow: 0 0 15px rgba(255,105,180,0.5);
         }
-        @media (max-width: 768px) {
-            .main-content, .sidebar {
-                width: 100%;
-            }
+        .bio, .poetry, #dynamic-content, .daily-wisdom, .fan-corner {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .interests {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .interest-item {
+            background-color: #ff9999;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            margin: 5px;
+        }
+        .interest-item:hover {
+            background-color: #ff6b6b;
+            transform: translateY(-3px);
+        }
+        .rose {
+            font-size: 24px;
+            margin: 0 5px;
+            color: #ff6b6b;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .iraqi-dialect {
+            font-style: italic;
+            color: #d35400;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #ff6b6b;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #ff9999;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>kmeeun Iraqi</h1>
-        <p class="subtitle">| مجرد كلمات ومواساة لنفسي | صوت للتغيير</p>
+        <h1><span class="rose">🌹</span> kmeein Iraqi <span class="rose">🌹</span></h1>
+        <h2>صفحتي المزهرة</h2>
     </header>
     
-    <div class="container">
-        <div class="content">
-            <div class="main-content">
-                <div class="card">
-                    <h2>أفكاري وتأملاتي</h2>
-                    <div class="tweet">
-                        منذ زمن وأنا أتعامل مع ناس غرباء على تويتر وما أعرفهم في الواقع وهاي الشغلة تخليني مرتاح لأن ماكو التزام شخصي لكن الجانب السلبي هو إنه إذا اختلف وياك أحد يبدأ الهجوم عليك بدون رحمة وهاي الشغلة بصراحة تخوفني يعني بسهولة ممكن تتعرض للسب والطعن رغم إني حذر كلش لكن مرات أمر بهيچ مواقف.
-                    </div>
-                    <div class="tweet">
-                        أكثر شي يقهر بالنفاق بمجتمعنا العراقي هو الناس اللي تتفاخر بالقيم والمبادئ وورا الكواليس تتناقض مع كل شي تحجي بيه يحاسبون غيرهم على أصغر زلة وهما نفسهم يغرقون بالعيوب منو اللي ضيعنه غير هالنفاق
-                    </div>
-                    <div class="tweet">
-                        ما نقبل بأي قانون ينتقص من حقوق نساءنا ويظلمهن النساء العراقيات هن أساس المجتمع وكرامتهن خط أحمر، لازم يكون قانون الأحوال الشخصية منصف وعادل يحمي حقوقهن ويراعي واقعهن اليوم …
-                        ‏⁧‫#حقوق_المرأة‬⁩
-                        ‏⁧‫#لا_تعديل_قانون_الأحوال_الشخصية‬⁩
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <h2>قصيدة اليوم</h2>
-                    <div class="poem">
-                        في قلب بغداد تنبض الحياة<br>
-                        بين أزقتها تروى الحكايات<br>
-                        صوت الناي يعانق صخب الشوارع<br>
-                        ونحن نحلم بغدٍ أجمل آتِ
-                    </div>
-                </div>
-            </div>
-            
-            <div class="sidebar">
-                <div class="card">
-                    <h2>عن kmeeun Iraqi</h2>
-                    <p> أسعى من خلال كلماتي لتسليط الضوء على قضايا مجتمعنا والدعوة للتغيير الإيجابي. أؤمن بقوة الكلمة في صنع الفرق وبناء جسور التواصل بين الناس.</p>
-                </div>
-                
-                <div class="card">
-                    <h2>اهتماماتي</h2>
-                    <ul>
-                        <li>الشعر والأدب العربي</li>
-                        <li>حقوق الإنسان والمرأة</li>
-                        <li>التغيير الاجتماعي الإيجابي</li>
-                        <li>الكتابة الإبداعية</li>
-                        <li>الثقافة العراقية المعاصرة</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <img src="IMG_2027.jpeg" alt="الصورة الشخصية" class="profile-image">
+    
+    <section class="bio">
+        <h2>شكد حلو اني اشوفكم</h2>
+        <p>هلا والله بيكم بصفحتي! <span class="iraqi-dialect">شلونكم شخباركم؟</span> آني kmeein، عراقي من الراس للكعب. احب اشارك وياكم افكاري وتجاربي، واحجي عن كل شي يخص بلدنا الحبيب. من الشعر للنكات، من التراث للمستقبل، كلشي موجود هنا!</p>
+    </section>
+    
+    <div class="interests">
+        <div class="interest-item" onclick="showContent('community')">المجتمع</div>
+        <div class="interest-item" onclick="showContent('poetry')">الشعر</div>
+        <div class="interest-item" onclick="showContent('Iraqi')">عراقيات</div>
+        <div class="interest-item" onclick="showContent('food')">الأكل العراقي</div>
+        <div class="interest-item" onclick="showContent('music')">الموسيقى</div>
+    </div>
+    
+    <div id="dynamic-content"></div>
+
+    <section class="daily-wisdom">
+        <h3>حكمة اليوم</h3>
+        <p><span class="iraqi-dialect">"الجار كبل الدار"</span> - مثل عراقي يذكرنا بأهمية الجيران وضرورة بناء علاقات طيبة معهم قبل حتى أن نختار بيتنا.</p>
+    </section>
+
+    <section class="poetry">
+        <h3>خاطرة اليوم</h3>
+        <p>
+            في شوارع بغداد، تمشي الحكايات<br>
+            بين أزقة الكرادة وأسواق الشورجة<br>
+            <span class="iraqi-dialect">هنا الناس تحجي بصوت الفرح</span><br>
+            والحب ينبض في قلب كل عراقي
+        </p>
+    </section>
+
+    <section class="fan-corner">
+        <h3>ركن المتابعين</h3>
+        <p><span class="iraqi-dialect">شكراً لكل اللي يتابعوني ويدعموني. انتو السبب ورى كل نجاح. خلونا نبني مجتمع حلو سوى، ونشارك الحب والفرح مع الكل.</span></p>
+    </section>
+
+    <div class="social-icons">
+        <a href="#" title="فيسبوك">📘</a>
+        <a href="#" title="تويتر">🐦</a>
+        <a href="#" title="انستغرام">📷</a>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const cards = document.querySelectorAll('.card');
-            cards.forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-            });
-
-            function isInViewport(element) {
-                const rect = element.getBoundingClientRect();
-                return (
-                    rect.top >= 0 &&
-                    rect.left >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                );
+        function showContent(topic) {
+            const contentDiv = document.getElementById('dynamic-content');
+            let content = '';
+            switch(topic) {
+                case 'community':
+                    content = '<h3>نبض المجتمع</h3><p>المجتمع العراقي كنز من التنوع والثقافة. من شماله لجنوبه، كل محافظة عندها طابعها الخاص. <span class="iraqi-dialect">بس الشي اللي يجمعنا كلنا هو حبنا للعراق وكرم الضيافة.</span> خلونا نحتفل بهالتنوع ونستفيد منه لبناء عراق أقوى وأجمل.</p>';
+                    break;
+                case 'poetry':
+                    content = '<h3>من روائع الشعر العراقي</h3><p>يقول الشاعر مظفر النواب:<br>أحبك جداً وأعرف أن الطريق إلى المستحيل طويل<br>وأعرف أنك ست النساء وليس لدي بديل</p>';
+                    break;
+                case 'Iraqi':
+                    content = '<h3>من التراث العراقي</h3><p><span class="iraqi-dialect">چانت ايام.. الجيران يتشاركون بالحلو والمر. يوم العيد، ريحة الكليجة تفوح من كل بيت، والأطفال يلعبون بالشوارع. هاي الذكريات تخلينا نحن للماضي ونطمح لمستقبل أحلى.</span></p>';
+                    break;
+                case 'food':
+                    content = '<h3>مطبخنا العراقي</h3><p><span class="iraqi-dialect">شنو رأيكم نسوي اليوم دولمة؟ ولا تفضلون المسكوف؟ عدنا بالعراق أكلات ماكو منها بأي مكان. من الباچة للكبة، كل أكلة الها قصة وطعم خاص.</span> يلا شاركونا وصفاتكم المفضلة!</p>';
+                    break;
+                case 'music':
+                    content = '<h3>نغمات عراقية</h3><p>من المقام العراقي لأغاني كاظم الساهر، الموسيقى العراقية غنية بتنوعها. <span class="iraqi-dialect">تعرفون أن المقام العراقي مسجل بقائمة التراث العالمي لليونسكو؟ هذا يدل على قيمة فنونا وثقافتنا.</span></p>';
+                    break;
             }
-
-            function scanDocument() {
-                cards.forEach(card => {
-                    if (isInViewport(card)) {
-                        card.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }
-                });
-            }
-
-            window.addEventListener('scroll', scanDocument);
-            scanDocument(); // Initial check
-        });
+            contentDiv.innerHTML = content;
+        }
     </script>
 </body>
 </html>
